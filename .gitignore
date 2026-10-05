@@ -1,0 +1,16 @@
+node_modules/
+extension/node_modules/
+extension/dist/
+.next/
+__pycache__/
+.venv/
+venv/
+.env
+server/.env
+web/.env.local
+data/
+*.pyc
+.pytest_cache/
+Files/
+.agents/
+.logs/

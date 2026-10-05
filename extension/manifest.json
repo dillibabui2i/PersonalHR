@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Personal HR",
+  "version": "0.1.0",
+  "description": "Shows Ask Your HR only while signed in on a supported registered portal.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage", "webNavigation", "scripting"],
+  "host_permissions": ["http://127.0.0.1:8000/*", "http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/ideas2it-mark.png"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+class TurnCancelled(Exception):
+    pass
